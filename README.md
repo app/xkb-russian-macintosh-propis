@@ -106,3 +106,4 @@ Russian (Macintosh, Propis)
 	http://cgit.freedesktop.org/xkeyboard-config/commit/?id=9e91c4c970f780087b49a2cc4f6a666b7ef2737c  
 
 
+
