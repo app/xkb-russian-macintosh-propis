@@ -32,19 +32,74 @@ Russian (Macintosh, Propis)
 	\ - обратный слеш  
 	^ - крышечка  
 	& - амперсант  
-	* - звездочка  
+	'*' - звездочка  
 
 4. Все перечисленные в пунктах 2 и 3 символы нарисованы и набираются на клавишах с цифрами от 1 до 0 локализованной (официально продаваемой в России) клавиатуры Apple Wired Keyboard MB110, за исключением  
 	' - одиночая кавычка набирается при нажатии клавиши '1'. На клавише изображение символа отсутствует.  
 	{ - открывающаяся фигурная скобка набирается при нажатии на клавишу '9'. На клавише изображение символа отсутствует.  
 	} - закрывающаяся фигурная скобка набирается при нажатии на клавишу '0'. На клавише изображение символа отсутствует.  
-	\ - обратный слеш набирается при нажатии комбинации из двух клавиш Shift+[5], вместо изображенного на клавише знака '%'.  
+	'\' - обратный слеш набирается при нажатии комбинации из двух клавиш Shift+[5], вместо изображенного на клавише знака '%'.  
 
 
-### Инструкция по применению к Ubuntu 13.10
+### Инструкция по применению к Ubuntu 13.10  
+Порядок шагов важен!  
+1. Добавить в конец файла  /usr/share/X11/xkb/symbols/ru  
+
+	// Apple layout
+	partial default alphanumeric_keys
+	xkb_symbols "ru_mac" {
+	include "ru(common)"
+
+	    name[Group1]= "Russian Macintosh";
+
+	    key <LSGT> {        [            less,         greater      ]       };
+	    key <TLDE> {        [    bracketright,     bracketleft      ]       };
+	    key	<AE01> {        [      apostrophe,          exclam      ]       };
+	    key <AE02> {        [        quotedbl,              at      ]       };
+	    key <AE03> {        [      numerosign,      numbersign      ]       };
+	    key <AE04> {        [         percent,          dollar      ]       };
+	    key <AE05> {        [           colon,       backslash      ]       };
+	    key <AE06> {        [           comma,     asciicircum      ]       };
+	    key <AE07> {        [          period,       ampersand      ]       };
+	    key <AE08> {        [       semicolon,        asterisk      ]       };
+	    key	<AE09> {	[       braceleft,       parenleft      ]       };
+	    key	<AE10> {        [      braceright,      parenright      ]       };
+	    key <BKSL> {        [     Cyrillic_io,     Cyrillic_IO      ]       };
+	};
+
+2. В файл /usr/share/X11/xkb/rules/evdev.xml вставляем  
+
+        <variant>  
+          <configItem>  
+            <name>ru_mac</name>  
+            <description>Russian (Macintosh)</description>  
+          </configItem>  
+        </variant>  
+
+Сразу после  
+
+	<name>ru</name>  
+
+        <shortDescription>ru</shortDescription>  
+        <description>Russian</description>  
+        <languageList>  
+          <iso639Id>rus</iso639Id>  
+        </languageList>  
+      </configItem>  
+      <variantList>  
+
+3. Удаляем откомпилированные раскладки  
+	sudo rm /var/lib/xkb/server-*.xkm  
+
+4. Ждем полчаса или находим как обновить кеш раскладок  
+Мне было проще подождать, поэтому я не знаю как обновить кеш :)
+
+5. Последний шаг - добавляем раскладку 'Russian (Macintosh)' через графический интерфейс Ubuntu  
+'Параметры системы' -> 'Клавиатура' -> 'Параметры раскладки'  
 
 
-Использована информация  
+
+### Использована информация  
 ( привожу несколько ссылок на одну и ту же информацию, на случай исчезновения какой-либо)  
 	http://forum.ubuntu.ru/index.php?topic=198392.0  
 	https://bugs.freedesktop.org/attachment.cgi?id=78099  
