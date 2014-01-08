@@ -43,7 +43,8 @@ Russian (Macintosh, Propis)
 
 ### Инструкция по применению к Ubuntu 13.10  
 Порядок шагов важен!  
-1. Добавить в конец файла  /usr/share/X11/xkb/symbols/ru  
+Шаг 1.  
+Добавить в конец файла  /usr/share/X11/xkb/symbols/ru  
 
 	// Apple layout
 	partial default alphanumeric_keys
@@ -65,9 +66,10 @@ Russian (Macintosh, Propis)
 	    key	<AE09> {	[       braceleft,       parenleft      ]       };
 	    key	<AE10> {        [      braceright,      parenright      ]       };
 	    key <BKSL> {        [     Cyrillic_io,     Cyrillic_IO      ]       };
-	};
-
-2. В файл /usr/share/X11/xkb/rules/evdev.xml вставляем  
+	};  
+  
+Шаг 2.  
+В файл /usr/share/X11/xkb/rules/evdev.xml вставляем  
 
         <variant>  
           <configItem>  
@@ -88,13 +90,16 @@ Russian (Macintosh, Propis)
       </configItem>  
       <variantList>  
 
-3. Удаляем откомпилированные раскладки  
+Шаг 3.  
+Удаляем откомпилированные раскладки  
 	sudo rm /var/lib/xkb/server-*.xkm  
 
-4. Ждем полчаса или находим как обновить кеш раскладок  
+Шаг 4.  
+Ждем полчаса или находим как обновить кеш раскладок  
 Мне было проще подождать, поэтому я не знаю как обновить кеш :)
 
-5. Последний шаг - добавляем раскладку 'Russian (Macintosh)' через графический интерфейс Ubuntu  
+Шаг 5.  
+Последний шаг - добавляем раскладку 'Russian (Macintosh)' через графический интерфейс Ubuntu  
 'Параметры системы' -> 'Клавиатура' -> 'Параметры раскладки'  
 
 
