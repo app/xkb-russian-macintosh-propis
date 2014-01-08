@@ -105,7 +105,7 @@ Russian (Macintosh, Propis)
 
 
 ### Использованая информация  
-Привожу несколько ссылок на одну и ту же информацию на разных сайтах, на случай исчезновения какой-либо из указанных страниц.
+Привожу несколько ссылок на одну и ту же информацию на разных сайтах, на случай исчезновения какой-либо из указанных страниц.  
 	http://forum.ubuntu.ru/index.php?topic=198392.0  
 	https://bugs.freedesktop.org/attachment.cgi?id=78099  
 	http://cgit.freedesktop.org/xkeyboard-config/commit/?id=9e91c4c970f780087b49a2cc4f6a666b7ef2737c  
