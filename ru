@@ -662,7 +662,7 @@ include "ru(common)"
 
     name[Group1]= "Russian Macintosh";
 
-    key <LSGT> {        [            less,         greater      ]       };
+    key <LSGT> {        [         greater,            less      ]       };
     key <TLDE> {        [    bracketright,     bracketleft      ]       };
     key	<AE01> {        [      apostrophe,          exclam      ]       };
     key <AE02> {        [        quotedbl,              at      ]       };
