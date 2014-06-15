@@ -61,7 +61,7 @@
 	    key <AE06> {        [           comma,     asciicircum      ]       };
 	    key <AE07> {        [          period,       ampersand      ]       };
 	    key <AE08> {        [       semicolon,        asterisk      ]       };
-	    key	<AE09> {	[       braceleft,       parenleft      ]       };
+	    key	<AE09> {        [       braceleft,       parenleft      ]       };
 	    key	<AE10> {        [      braceright,      parenright      ]       };
 	    key <BKSL> {        [     Cyrillic_io,     Cyrillic_IO      ]       };
 	};  
