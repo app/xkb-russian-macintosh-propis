@@ -42,11 +42,11 @@ xkb_symbols "basic" {
     key <AC10> {	[ semicolon,	colon, End		]	};
     key <AC11> {	[ apostrophe,	quotedbl	]	};
 
-    key <AB01> {	[	  z,	Z 		]	};
-    key <AB02> {	[	  x,	X		]	};
-    key <AB03> {	[	  c,	C		]	};
-    key <AB04> {	[	  v,	V		]	};
-    key <AB05> {	[	  b,	B		]	};
+    key <AB01> {	[	  z,	Z, KP_Decimal 		]	};
+    key <AB02> {	[	  x,	X, KP_1		]	};
+    key <AB03> {	[	  c,	C, KP_2		]	};
+    key <AB04> {	[	  v,	V, KP_3		]	};
+    key <AB05> {	[	  b,	B, KP_Subtract		]	};
     key <AB06> {	[	  n,	N, Num_Lock		]	};
     key <AB07> {	[	  m,	M, Next		]	};
     key <AB08> {	[     comma,	less		]	};
