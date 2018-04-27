@@ -74,7 +74,7 @@
 
 	    key <LSGT> {        [         greater,            less      ]       };
 	    key <TLDE> {        [    bracketright,     bracketleft      ]       };
-	    key	<AE01> {        [      apostrophe,          exclam      ]       };
+	    key <AE01> {        [      apostrophe,          exclam      ]       };
 	    key <AE02> {        [        quotedbl,              at      ]       };
 	    key <AE03> {        [      numerosign,      numbersign      ]       };
 	    key <AE04> {        [         percent,          dollar      ]       };
@@ -82,8 +82,8 @@
 	    key <AE06> {        [           comma,     asciicircum      ]       };
 	    key <AE07> {        [          period,       ampersand      ]       };
 	    key <AE08> {        [       semicolon,        asterisk      ]       };
-	    key	<AE09> {        [       braceleft,       parenleft      ]       };
-	    key	<AE10> {        [      braceright,      parenright      ]       };
+	    key <AE09> {        [       braceleft,       parenleft      ]       };
+	    key <AE10> {        [      braceright,      parenright      ]       };
 	    key <BKSL> {        [     Cyrillic_io,     Cyrillic_IO      ]       };
 Шаг 2.  
 Обновляем конфигурацию системы  
