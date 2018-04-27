@@ -39,7 +39,66 @@
 	«\» — обратный слэш набирается при нажатии комбинации из двух клавиш «Shift»+«5», вместо изображенного на клавише знака «%».  
 
 
-### Инструкция по применению к Ubuntu 13.10 и более поздним версиям  
+### Первоначальная Инструкция устарела и/или не точна  
+### Упрощенная инструкция  
+Шаг 1.  
+В конеце файла  /usr/share/X11/xkb/symbols/ru  
+находим блок (Пример взят из Ubuntu 18.04)  
+
+  // Apple layout
+  partial alphanumeric_keys
+  xkb_symbols "mac" {
+  
+      include "ru(common)"
+      name[Group1]= "Russian (Macintosh)";
+  
+      key <LSGT> {        [         greater,            less      ]       };
+      key <TLDE> {        [    bracketright,     bracketleft      ]       };
+      key	<AE01> {        [      apostrophe,          exclam      ]       };
+      key <AE02> {        [        quotedbl,              at      ]       };
+      key <AE03> {        [      numerosign,      numbersign      ]       };
+      key <AE04> {        [         percent,          dollar      ]       };
+      key <AE05> {        [           colon,       backslash      ]       };
+      key <AE06> {        [           comma,     asciicircum      ]       };
+      key <AE07> {        [          period,       ampersand      ]       };
+      key <AE08> {        [       semicolon,        asterisk      ]       };
+      key	<AE09> {        [       braceleft,       parenleft      ]       };
+      key	<AE10> {        [      braceright,      parenright      ]       };
+      key <BKSL> {        [     Cyrillic_io,     Cyrillic_IO      ]       };
+  
+      include "level3(ralt_switch)"
+  };
+
+Строки key <...> {....};    
+удаляем, поставив вместо них следующие  
+
+	    key <LSGT> {        [         greater,            less      ]       };
+	    key <TLDE> {        [    bracketright,     bracketleft      ]       };
+	    key	<AE01> {        [      apostrophe,          exclam      ]       };
+	    key <AE02> {        [        quotedbl,              at      ]       };
+	    key <AE03> {        [      numerosign,      numbersign      ]       };
+	    key <AE04> {        [         percent,          dollar      ]       };
+	    key <AE05> {        [           colon,       backslash      ]       };
+	    key <AE06> {        [           comma,     asciicircum      ]       };
+	    key <AE07> {        [          period,       ampersand      ]       };
+	    key <AE08> {        [       semicolon,        asterisk      ]       };
+	    key	<AE09> {        [       braceleft,       parenleft      ]       };
+	    key	<AE10> {        [      braceright,      parenright      ]       };
+	    key <BKSL> {        [     Cyrillic_io,     Cyrillic_IO      ]       };
+Шаг 2.  
+Обновляем конфигурацию системы  
+```
+sudo dpkg-reconfigure xkb-data  
+```
+
+Шаг 3.  
+Последний шаг — добавляем раскладку «Русская (Macintosh)» через графический интерфейс Ubuntu  
+«Параметры» -> «Регион и язык» -> блок «Источник ввода» со списком активных раскладок клавиатуры  
+Если раскладка «Русская (Macintosh)» была использована/установлена ранее, ее нужно удалить из этого списка и добавить заново  
+
+Перезагрузка не требуется. 
+
+### Первоначальная Инструкция по применению к Ubuntu 13.10 и более поздним версиям  
 Порядок шагов важен!  
 Шаг 1.  
 Добавить в конец файла  /usr/share/X11/xkb/symbols/ru  
