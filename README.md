@@ -45,13 +45,13 @@
 В конеце файла  /usr/share/X11/xkb/symbols/ru  
 находим блок (Пример взят из Ubuntu 18.04)  
 
-  // Apple layout
-  partial alphanumeric_keys
-  xkb_symbols "mac" {
-  
+    // Apple layout
+    partial alphanumeric_keys
+    xkb_symbols "mac" {
+
       include "ru(common)"
       name[Group1]= "Russian (Macintosh)";
-  
+
       key <LSGT> {        [         greater,            less      ]       };
       key <TLDE> {        [    bracketright,     bracketleft      ]       };
       key	<AE01> {        [      apostrophe,          exclam      ]       };
@@ -65,9 +65,9 @@
       key	<AE09> {        [       braceleft,       parenleft      ]       };
       key	<AE10> {        [      braceright,      parenright      ]       };
       key <BKSL> {        [     Cyrillic_io,     Cyrillic_IO      ]       };
-  
+
       include "level3(ralt_switch)"
-  };
+    };
 
 Строки key <...> {....};    
 удаляем, поставив вместо них следующие  
