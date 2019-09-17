@@ -50,27 +50,26 @@
     partial alphanumeric_keys
     xkb_symbols "mac" {
 
-      include "ru(common)"
-      name[Group1]= "Russian (Macintosh)";
+        include "ru(common)"
+        name[Group1]= "Russian (Macintosh)";
 
-      key <LSGT> {        [         greater,            less      ]       };
-      key <TLDE> {        [    bracketright,     bracketleft      ]       };
-      key <AE01> {        [      apostrophe,          exclam      ]       };
-      key <AE02> {        [        quotedbl,              at      ]       };
-      key <AE03> {        [      numerosign,      numbersign      ]       };
-      key <AE04> {        [         percent,          dollar      ]       };
-      key <AE05> {        [           colon,       backslash      ]       };
-      key <AE06> {        [           comma,     asciicircum      ]       };
-      key <AE07> {        [          period,       ampersand      ]       };
-      key <AE08> {        [       semicolon,        asterisk      ]       };
-      key <AE09> {        [       braceleft,       parenleft      ]       };
-      key <AE10> {        [      braceright,      parenright      ]       };
-      key <BKSL> {        [     Cyrillic_io,     Cyrillic_IO      ]       };
+        key <LSGT> { [          less,      greater  ] };
+        key <AE02> { [             2,     quotedbl  ] };
+        key <AE03> { [             3,   numerosign  ] };
+        key <AE04> { [             4,      percent  ] };
+        key <AE05> { [             5,        colon  ] };
+        key <AE06> { [             6,        comma  ] };
+        key <AE07> { [             7,       period  ] };
+        key <AE08> { [             8,    semicolon  ] };
+        key <TLDE> { [  bracketright,  bracketleft  ] };
+        key <BKSL> { [   Cyrillic_io,  Cyrillic_IO  ] };
 
-      include "level3(ralt_switch)"
+        key <AC06> { [   Cyrillic_er,  Cyrillic_ER, U20BD ] };
+
+        include "level3(ralt_switch)"
     };
 
-Строки key <...> {....};    
+Строки ``` key <...> {....}; ```    
 удаляем, поставив вместо них следующие  
 
 	    key <LSGT> {        [         greater,            less      ]       };
