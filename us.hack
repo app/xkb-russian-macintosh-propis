@@ -55,6 +55,8 @@ xkb_symbols "basic" {
 
     key <BKSL> {	[ backslash,         bar	]	};
 
+    include "level3(ralt_switch)"
+
 
 };
 

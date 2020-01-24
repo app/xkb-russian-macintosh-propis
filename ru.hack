@@ -708,31 +708,49 @@ xkb_symbols "mac" {
     include "ru(common)"
     name[Group1]= "Russian (Macintosh)";
 
-//    key <LSGT> { [          less,      greater  ] };
-//    key <AE02> { [             2,     quotedbl  ] };
-//    key <AE03> { [             3,   numerosign  ] };
-//    key <AE04> { [             4,      percent  ] };
-//    key <AE05> { [             5,        colon  ] };
-//    key <AE06> { [             6,        comma  ] };
-//    key <AE07> { [             7,       period  ] };
-//    key <AE08> { [             8,    semicolon  ] };
-//    key <TLDE> { [  bracketright,  bracketleft  ] };
-//    key <BKSL> { [   Cyrillic_io,  Cyrillic_IO  ] };
-//
-
     key <LSGT> {        [         greater,            less      ]       };
     key <TLDE> {        [    bracketright,     bracketleft      ]       };
-    key <AE01> {        [      apostrophe,          exclam      ]       };
-    key <AE02> {        [        quotedbl,              at      ]       };
-    key <AE03> {        [      numerosign,      numbersign      ]       };
-    key <AE04> {        [         percent,          dollar      ]       };
-    key <AE05> {        [           colon,       backslash      ]       };
-    key <AE06> {        [           comma,     asciicircum      ]       };
-    key <AE07> {        [          period,       ampersand      ]       };
-    key <AE08> {        [       semicolon,        asterisk      ]       };
-    key <AE09> {        [       braceleft,       parenleft      ]       };
+    key <AE01> {        [      apostrophe,          exclam,	1 ]       };
+    key <AE02> {        [        quotedbl,              at,     2 ]       };
+    key <AE03> {        [      numerosign,      numbersign,     3 ]       };
+    key <AE04> {        [         percent,          dollar,     4 ]       };
+    key <AE05> {        [           colon,       backslash,     5 ]       };
+    key <AE06> {        [           comma,     asciicircum,     6 ]       };
+    key <AE07> {        [          period,       ampersand,     7 ]       };
+    key <AE08> {        [       semicolon,        asterisk,     8 ]       };
+    key <AE09> {        [       braceleft,       parenleft,     9 ]       };
     key <AE10> {        [      braceright,      parenright      ]       };
     key <BKSL> {        [     Cyrillic_io,     Cyrillic_IO      ]       };
+
+    key <AD01> { [   Cyrillic_shorti,   Cyrillic_SHORTI, KP_Divide  ] };
+    key <AD02> { [      Cyrillic_tse,      Cyrillic_TSE, KP_7  ] };
+    key <AD03> { [        Cyrillic_u,        Cyrillic_U, KP_8  ] };
+    key <AD04> { [       Cyrillic_ka,       Cyrillic_KA, KP_9  ] };
+    key <AD05> { [       Cyrillic_ie,       Cyrillic_IE, KP_Multiply  ] };
+    key <AD06> { [       Cyrillic_en,       Cyrillic_EN, Print  ] };
+    key <AD07> { [      Cyrillic_ghe,      Cyrillic_GHE, Prior  ] };
+    key <AD08> { [      Cyrillic_sha,      Cyrillic_SHA, Up  ] };
+
+    key <AC01> { [       Cyrillic_ef,       Cyrillic_EF, KP_0  ] };
+    key <AC02> { [     Cyrillic_yeru,     Cyrillic_YERU, KP_4  ] };
+    key <AC03> { [       Cyrillic_ve,       Cyrillic_VE, KP_5  ] };
+    key <AC04> { [        Cyrillic_a,        Cyrillic_A, KP_6  ] };
+    key <AC05> { [       Cyrillic_pe,       Cyrillic_PE, KP_Add  ] };
+    key <AC06> { [       Cyrillic_er,       Cyrillic_ER, Home  ] };
+    key <AC07> { [        Cyrillic_o,        Cyrillic_O, Left  ] };
+    key <AC08> { [       Cyrillic_el,       Cyrillic_EL, Down  ] };
+    key <AC09> { [       Cyrillic_de,       Cyrillic_DE, Right  ] };
+    key <AC10> { [      Cyrillic_zhe,      Cyrillic_ZHE, End  ] };
+
+    key <AB01> { [       Cyrillic_ya,       Cyrillic_YA, KP_Decimal  ] };
+    key <AB02> { [      Cyrillic_che,      Cyrillic_CHE, KP_1  ] };
+    key <AB03> { [       Cyrillic_es,       Cyrillic_ES, KP_2  ] };
+    key <AB04> { [       Cyrillic_em,       Cyrillic_EM, KP_3  ] };
+    key <AB05> { [        Cyrillic_i,        Cyrillic_I, KP_Subtract  ] };
+    key <AB06> { [       Cyrillic_te,       Cyrillic_TE, Num_Lock  ] };
+    key <AB07> { [ Cyrillic_softsign, Cyrillic_SOFTSIGN, Next  ] };
+
+//    include "level3(ralt_switch)"
 
 };
 
